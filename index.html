@@ -8,7 +8,7 @@
 
 		<link rel="stylesheet" href="css/reset.css">
 		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/black.css">
+		<link rel="stylesheet" href="css/theme/sky.css">
 
 		<!-- Theme used for syntax highlighting of code -->
 		<link rel="stylesheet" href="lib/css/monokai.css">
@@ -25,8 +25,100 @@
 	<body>
 		<div class="reveal">
 			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
+
+                <section>
+                    <section data-markdown>
+                        <textarea data-template>## Typescript</textarea>
+                     </section>
+                    <section>
+                        An open-source programming
+                        language developed and maintained by Microsoft.
+                        It is a strict syntactical superset of JavaScript,
+                        and adds optional static typing to the language.
+                    </section>
+                    <section>
+                        TS - Compiled (transpiled)  vs JS - Interpretable
+                    </section>
+                    <section>
+                        Strict typing
+                    </section>
+                    <section>
+                        Static typing
+                    </section>
+                    <section>
+                        Explicit or implicit typing
+                    </section>
+                </section>
+                <section>
+                    <section data-markdown>
+                        <p data-template>## Benefits:</p>
+                    </section>
+                    <section id="fragments">
+                        <p> -More reliable code</p>
+                        <p class="fragment">-Scope of class properties</p>
+                        <p class="fragment">-Fewer tests</p>
+                        <p class="fragment">-Commit-security</p>
+                    </section>
+                    <section data-markdown>
+                        <p data-template>## Limitations:</p>
+                    </section>
+                    <section id="fragments">
+                        <p> -Difficult using of libraries&frameworks</p>
+                        <p class="fragment"> -Not popular</p>
+                        <p class="fragment">-Longer development</p>
+                    </section>
+                </section>
+                <section data-state="customevent">
+                    <h2>Installing</h2>
+                    <h3>Node.js</h3>
+                    <pre><code class="hljs javascript" data-trim contenteditable style="font-size: 18px;">
+                        npm install -g typescript
+					</code></pre>
+                    <h4>Provides a command-line compiler.</h4>
+                    <pre><code class="hljs javascript" data-trim contenteditable style="font-size: 18px;">
+                        tsc source.ts
+					</code></pre>
+                </section>
+                <section>
+                    <section>Language</section>
+                    <section>
+                        <h2>Type declarations and type checking</h2>
+                        <pre><code class="hlts typeascript" data-trim contenteditable style="font-size: 18px;">
+                            var inx: number = 1,
+                            text: string = “Lorem”,
+                            isReady: bool = false,
+                            arr: string[],
+                            obj: ObjInterface = factory.getObj(),
+                            mixedVal: any;
+                        </code></pre>
+                    </section>
+                    <section>
+                        <h3>Initialize objects</h3>
+                        <pre><code class="hlts typescript" data-trim contenteditable style="font-size: 18px;">
+                            var obj: { x: number, y: number },
+                            fn: ( x: number, y?: any ) => number,
+                            constr: new() => ObjInterface;
+                        </code></pre>
+                    </section>
+                    <section>
+                        <h3>JS</h3>
+                        <pre><code class="hljs javascript" data-trim contenteditable style="font-size: 18px;">
+                            var treatItems = function( arr, callback ) {
+                                // do something return arr;
+                            }
+                        </code></pre>
+                        <h3>TS</h3>
+                        <pre><code class="hlts typescript" data-trim contenteditable style="font-size: 18px;">
+                            var treatItems = function(
+                                arr: string[],
+                                callback: (value: string, inx: number, arr: string[]) => string[]) {
+                                // do something return arr;
+                            };
+                        </code></pre>
+                    </section>
+                </section>
+
+
 			</div>
 		</div>
 
