@@ -74,13 +74,16 @@
                     <pre><code class="hljs javascript" data-trim contenteditable style="font-size: 18px;">
                         npm install -g typescript
 					</code></pre>
-                    <h4>Provides a command-line compiler.</h4>
+                    <h4>Command-line compiler.</h4>
                     <pre><code class="hljs javascript" data-trim contenteditable style="font-size: 18px;">
                         tsc source.ts
 					</code></pre>
                 </section>
+                <section data-markdown>
+                    <p data-template>## Language</p>
+                </section>
                 <section>
-                    <section>Language</section>
+                    <section>Type declarations and type checking</section>
                     <section>
                         <h2>Type declarations and type checking</h2>
                         <pre><code class="hlts typeascript" data-trim contenteditable style="font-size: 18px;">
@@ -117,8 +120,98 @@
                         </code></pre>
                     </section>
                 </section>
+                <section>
+                    <section>Classes</section>
+                    <section>
+                        <pre><code class="hlts typescript" data-trim contenteditable style="font-size: 18px;">
+                        class Mamal{
+                            private nickname: string;
+                            constructor( nickname: string = "Noname" ) {
+                                this.nickname = nickname;
+                            }
+                            public getNickname():string {
+                                return this.nickname;
+                            }
+                        }
+                        </code></pre>
+                    </section>
+                    <section>
+                        <pre><code class="hlts typescript" data-trim contenteditable style="font-size: 18px;">
+                        class Cat extends Mamal{
+                            private family: string = "Felidae";
+                            constructor( nickname: string ) {
+                                super( nickname );
+                            }
+                            public getFamily():string {
+                                return this.family;
+                            }
+                        }
+                        </code></pre>
+                    </section>
+                    <section>
+                        <pre><code class="hlts typescript" data-trim contenteditable style="font-size: 18px;">
+                            // Generated JavaScript:helper
+                            var __extends = this.__extends || function (d,b) {
+                                function __() {
+                                    this.constructor = d;
+                                }
+                                __.prototype = b.prototype;
+                                d.prototype = new __();
+                            }
+                        </code></pre>
+                    </section>
+                    <section>
+                        <pre><code class="hlts typescript" data-trim contenteditable style="font-size: 18px;">
+                            // Generated JavaScript:classes
+                            var Mamal = (function () { … })();
+                            var Cat = (function (_super) {
+                                __extends(Cat, _super);
+                                function Cat(nickname) {
+                                    _super.call(this, nickname);
+                                    this.family = "Felidae";
+                                }
+                                Cat.prototype.getFamily = function () {
+                                    return this.family;
+                                };
+                                return Cat;
+                            })(Mamal);
+                        </code></pre>
+                    </section>
+                </section>
+                <section>
+                    <section>Interfaces</section>
+                    <section>
+                        <h5>Interface:</h5>
+                        <pre><code class="hlts typescript" data-trim contenteditable style="font-size: 18px;">
+                        interface IUser {
+                            id: number;
+                            name: string;
+                        }
+                        </code></pre>
+                        <h5>Object:</h5>
+                        <pre><code class="hlts typescript" data-trim contenteditable style="font-size: 18px;">
+                        let employee: IUser = {
+                            id: 1,
+                            name: "Tom"
+                        }
+                        </code></pre>
+                    </section>
+                    <section>
+                        <h5>Non-return fields</h5>
+                        <pre><code class="hlts typescript" data-trim contenteditable style="font-size: 18px;">
+                        interface IUser2 {
+                            move(): void;
+                        }
+                        </code></pre>
+                    </section>
+                </section>
+                <section>
+                    <section>Modules</section>
 
 
+
+
+                </section>
 			</div>
 		</div>
 
