@@ -83,16 +83,28 @@
                     <p data-template>## Language</p>
                 </section>
                 <section>
-                    <section>Type declarations and type checking</section>
+                    <section><h3>Types</h3></section>
                     <section>
-                        <h2>Type declarations and type checking</h2>
+                        <h3>Type declarations and type checking</h3>
                         <pre><code class="hlts typeascript" data-trim contenteditable style="font-size: 18px;">
-                            var inx: number = 1,
+                            let inx: number = 1,
                             text: string = “Lorem”,
                             isReady: bool = false,
+                            year: number|string,
                             arr: string[],
                             obj: ObjInterface = factory.getObj(),
                             mixedVal: any;
+                            //multitype
+                            let multitypeVar: string | number = 'String'
+                            multitypeVar = 20
+                        </code></pre>
+                    </section>
+
+                    <section>
+                        <h3>Own types</h3>
+                        <pre><code class="hlts typeascript" data-trim contenteditable style="font-size: 18px;">
+                            type Human = {firstName: string, age: number, height: number}
+                            const human: Human = {firstName: ‘Franz’, age: 32, height: 185}
                         </code></pre>
                     </section>
                     <section>
@@ -121,7 +133,7 @@
                     </section>
                 </section>
                 <section>
-                    <section>Classes</section>
+                    <section><h3>Classes</h3></section>
                     <section>
                         <pre><code class="hlts typescript" data-trim contenteditable style="font-size: 18px;">
                         class Mamal{
@@ -179,13 +191,15 @@
                     </section>
                 </section>
                 <section>
-                    <section>Interfaces</section>
+                    <section><h3>Interfaces</h3></section>
                     <section>
                         <h5>Interface:</h5>
                         <pre><code class="hlts typescript" data-trim contenteditable style="font-size: 18px;">
                         interface IUser {
-                            id: number;
-                            name: string;
+                            id: number,
+                            name: string,
+                            year?: number,
+                            readonly count: number
                         }
                         </code></pre>
                         <h5>Object:</h5>
@@ -206,11 +220,12 @@
                     </section>
                 </section>
                 <section>
-                    <section>Modules</section>
-
-
-
-
+                    <section><h3>TSlint</h3></section>
+                    <pre><code class="hlts typescript" data-trim contenteditable style="font-size: 18px;">
+                        npm install tslint typescript --save-dev npm install tslint typescript -g
+                        tslint --init
+                    </code></pre>
+                    <p>All rules are in tslins.json now</p>
                 </section>
 			</div>
 		</div>
