@@ -42,21 +42,30 @@ At this slide we can see all variables types . Everything is clear with names.  
 
 You also can create your own types throw ‘type’ keyword.
 
-Now you can see how to create objects in TS. It is very similar to javascript but now we write the variables types
-Let’s see the difference on another example. There is the same function but at the top of slide it is on js and at the bottom it is on ts. See? We don’t need to write tests for incorrect var types now because ts will check it itself.
-Now speak about classes
-Let’s create new class Mamal. Don’t forget to specify types for variable because if we wouldn’t do that typescript will be useless.
-Create another class Cat which extends Mamal. We also have to specify method type it will be the type of return data.
-Some template for our case when transform ts to js.
-And finally, let's see what the previously written code looks like in native Js. No types as you can see but typescript doesn’t sleep, it check the types.
-What is interface? It is type-description of our object’s template for object creating in future. If we create object we could to set it type to some interface. Let’s look for examples.
-Note that if we want some filed not to be required we should specify it with question-symbol.
+Now you can see how to create objects in TS. It is very similar to javascript but now we write the variables types.
 
+Let’s see the difference on another example. There is the same function but at the top of slide it is on js and at the bottom it is on ts. See? We don’t need to write tests for incorrect var types now because ts will check it itself.
+
+Now speak about classes.
+
+Let’s create new class Mamal. Don’t forget to specify types for variable because if we wouldn’t do that typescript will be useless.
+
+Create another class Cat which extends Mamal. We also have to specify method type it will be the type of return data.
+
+Some template for our case when transform ts to js.
+
+And finally, let's see what the previously written code looks like in native Js. No types as you can see but typescript doesn’t sleep, it check the types.
+
+What is interface?
+It is type-description of our object’s template for object creating in future. If we create object we could to set it type to some interface. Let’s look for examples.
+
+Note that if we want some fileds not to be required we should specify it with question-symbol.
 Also pay attention on readonly keyword. It is mean that you can change variable only one initial time. Every next time the variable will be only for reading.
 Create interface IUser. And after create the object employee with type of IUser. See? Now type of employee id = number as we have written earlier in the IUser.
+
 If the field of object won’t return any value we set the type to void;
 
-Great. Continue
+At the final I want to note TSlint which is the brother of our well known ESlint.
 
-At the final I want to note TSlint that is the brother of our well known ESlint. Write the code on the slide to install and init TSlinter. tslins.json will be created which would contain all rules for tslint.
+Write the code on the slide to install and init TSlinter. tslins.json will be created which would contain all rules for tslint.
 
